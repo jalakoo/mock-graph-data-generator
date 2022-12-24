@@ -1,7 +1,4 @@
 {
-    "README":{
-        "content": "This is the default list of all generators used by the app. If you add new generators they will be added to this file. The default_generators.json file contains a copy of this from the repo maintainer(s)"
-    },
     "05711cac": {
         "args": [],
         "code_url": "mock_generators/generators/05711cac.py",
@@ -17,7 +14,9 @@
         "args": [
             {
                 "default": "",
+                "hint": "",
                 "label": "Optional Domain (ie: company.com)",
+                "placeholder": "",
                 "type": "String"
             }
         ],
@@ -33,7 +32,9 @@
         "args": [
             {
                 "default": "",
+                "hint": "",
                 "label": "List of float (ie: 1.0, 2.2, 3.3)",
+                "placeholder": "",
                 "type": "String"
             }
         ],
@@ -50,12 +51,16 @@
         "args": [
             {
                 "default": 1,
+                "hint": "",
                 "label": "Minimum Number",
+                "placeholder": "",
                 "type": "Integer"
             },
             {
                 "default": 10,
+                "hint": "",
                 "label": "Maximum Number",
+                "placeholder": "",
                 "type": "Integer"
             }
         ],
@@ -71,16 +76,47 @@
         ],
         "type": "String"
     },
+    "39ebb391": {
+        "args": [
+            {
+                "default": "",
+                "hint": "Filepath to .csv file",
+                "label": "CSV Filepath",
+                "placeholder": "mock_generators/datasets/tech_companies.csv",
+                "type": "String"
+            },
+            {
+                "default": "",
+                "hint": "CSV column header field name to draw data from",
+                "label": "Header Column Field",
+                "placeholder": "Latitude",
+                "type": "String"
+            }
+        ],
+        "code_url": "mock_generators/generators/39ebb391.py",
+        "description": "Random float from a target .csv column",
+        "name": "Float from CSV",
+        "tags": [
+            "float",
+            " csv",
+            " file"
+        ],
+        "type": "Float"
+    },
     "469b37c7": {
         "args": [
             {
                 "default": 1,
+                "hint": "",
                 "label": "Min",
+                "placeholder": "",
                 "type": "Integer"
             },
             {
                 "default": 10,
+                "hint": "",
                 "label": "Max",
+                "placeholder": "",
                 "type": "Integer"
             }
         ],
@@ -121,7 +157,9 @@
         "args": [
             {
                 "default": 50,
+                "hint": "",
                 "label": "Percent chance of true (out of 100)",
+                "placeholder": "",
                 "type": "Integer"
             }
         ],
@@ -160,7 +198,9 @@
         "args": [
             {
                 "default": "",
+                "hint": "",
                 "label": "List of words (ie: alpha, brave, charlie)",
+                "placeholder": "",
                 "type": "String"
             }
         ],
@@ -202,7 +242,9 @@
         "args": [
             {
                 "default": 37,
+                "hint": "",
                 "label": "Limit character length",
+                "placeholder": "",
                 "type": "Integer"
             }
         ],
@@ -232,12 +274,16 @@
         "args": [
             {
                 "default": "1970-01-01",
+                "hint": "",
                 "label": "Oldest Date",
+                "placeholder": "",
                 "type": "Datetime"
             },
             {
                 "default": "2022-11-24",
+                "hint": "",
                 "label": "Newest Date",
+                "placeholder": "",
                 "type": "Datetime"
             }
         ],
@@ -282,21 +328,49 @@
         ],
         "type": "String"
     },
+    "d286a2cd": {
+        "args": [
+            {
+                "default": "",
+                "hint": "Filepath to .csv file",
+                "label": "CSV Filepath",
+                "placeholder": "mock_generators/datasets/tech_companies.csv",
+                "type": "String"
+            },
+            {
+                "default": "",
+                "hint": "CSV column header field name to draw data from",
+                "label": "Header Column Field",
+                "placeholder": "Zip",
+                "type": "String"
+            }
+        ],
+        "code_url": "mock_generators/generators/d286a2cd.py",
+        "description": "Random integer from a target .csv column",
+        "name": "Int from CSV",
+        "tags": [
+            "int",
+            " integer",
+            " csv",
+            " file"
+        ],
+        "type": "Integer"
+    },
     "df2bbd43": {
         "args": [
             {
                 "default": "",
+                "hint": "Filepath to CSV file.",
                 "label": "CSV Filepath",
-                "type": "String",
-                "hint": "mock_generators/datasets/tech_companies.csv",
-                "description":""
+                "placeholder": "mock_generators/datasets/tech_companies.csv",
+                "type": "String"
             },
             {
                 "default": "",
+                "hint": "Header column field name to pull data from",
                 "label": "Header Column Field",
-                "type": "String",
-                "hint": "Company Name",
-                "description":""
+                "placeholder": "Company Name",
+                "type": "String"
             }
         ],
         "code_url": "mock_generators/generators/df2bbd43.py",
@@ -313,7 +387,9 @@
         "args": [
             {
                 "default": 33,
+                "hint": "",
                 "label": "Limit Character Length",
+                "placeholder": "",
                 "type": "Integer"
             }
         ],
@@ -331,7 +407,9 @@
         "args": [
             {
                 "default": "",
+                "hint": "",
                 "label": "List of integers (ie: 1, 2, 3)",
+                "placeholder": "",
                 "type": "String"
             }
         ],
@@ -354,17 +432,23 @@
         "args": [
             {
                 "default": 0.0,
+                "hint": "",
                 "label": "Min",
+                "placeholder": "",
                 "type": "Float"
             },
             {
                 "default": 1.0,
+                "hint": "",
                 "label": "Max",
+                "placeholder": "",
                 "type": "Float"
             },
             {
                 "default": 2,
+                "hint": "",
                 "label": "Decimal Places",
+                "placeholder": "",
                 "type": "Integer"
             }
         ],
@@ -386,7 +470,9 @@
         "args": [
             {
                 "default": 1,
+                "hint": "",
                 "label": "Value",
+                "placeholder": "",
                 "type": "Integer"
             }
         ],
@@ -406,12 +492,16 @@
         "args": [
             {
                 "default": 1,
+                "hint": "",
                 "label": "Minimum Number",
+                "placeholder": "",
                 "type": "Integer"
             },
             {
                 "default": 10,
+                "hint": "",
                 "label": "Maximum Number",
+                "placeholder": "",
                 "type": "Integer"
             }
         ],
@@ -430,12 +520,16 @@
         "args": [
             {
                 "default": 1,
+                "hint": "",
                 "label": "Minimum Number",
+                "placeholder": "",
                 "type": "Integer"
             },
             {
                 "default": 10,
+                "hint": "",
                 "label": "Maximum Number",
+                "placeholder": "",
                 "type": "Integer"
             }
         ],

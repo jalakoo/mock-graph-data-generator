@@ -6,7 +6,7 @@ import datetime
 
 def input_type(label: str, type: str, key:str) -> any:
     type = type.lower()
-    help = "An optional default value for the argument that will populate this generator arg when the generator is selected."
+    help = "Default value for the argument that will populate this generator arg when the generator is selected."
     if type == "string":
         return st.text_input(label, key=key, help=help)
     elif type == "int":
@@ -76,10 +76,17 @@ def new_generator_argument(
 
     default = input_type("Default Value", type_input, key=f"arg_type_{index}_default")
 
+    placeholder = st.text_input("Placeholder", key = f"arg_type_{index}_placeholder", help="Placeholder text that will be displayed in the UI input field as an example of what a user may enter.")
+
+    hint = st.text_input("Optional Hint", key = f"arg_type_{index}_hint", help="Optional hint text that will be displayed in the UI to help the user understand what to enter.")
+
+
     if label is not None and label != "":
         return {
             "type": type_input.lower(),
             "label": label,
-            "default": default
+            "default": default,
+            "hint": hint,
+            "placeholder": placeholder
         }
     return None

@@ -95,26 +95,32 @@ def property_row(
                     arg_input = st.text_input(
                         label=arg.label, 
                         value = arg.default,
-                        key = f'{type}_{pid}_property_{name}_generator_{selected_generator.id}_{arg.label}'
+                        key = f'{type}_{pid}_property_{name}_generator_{selected_generator.id}_{arg.label}',
+                        help = f'{arg.hint}',
+                        placeholder = f'{arg.placeholder}'
                         )
                 elif arg.type == GeneratorType.INT or arg.type == GeneratorType.FLOAT:
                     arg_input = st.number_input(
                         label= arg.label,
                         value= arg.default,
-                        key = f'{type}_{pid}_property_{name}_generator_{selected_generator.id}_{arg.label}'
+                        key = f'{type}_{pid}_property_{name}_generator_{selected_generator.id}_{arg.label}',
+                        help = f'{arg.hint}'
                         )
                 elif arg.type == GeneratorType.BOOL:
                     arg_input = st.radio(
                         label=arg.label,
                         index=arg.default,
-                        key = f'{type}_{pid}_property_{name}_generator_{selected_generator.id}_{arg.label}'
+                        key = f'{type}_{pid}_property_{name}_generator_{selected_generator.id}_{arg.label}',
+                        help = f'{arg.hint}'
                     )
                     # arg_inputs.append()
                 elif arg.type == GeneratorType.DATETIME:
                     arg_input = st.date_input(
                         label=arg.label,
                         value=datetime.datetime.fromisoformat(arg.default),
-                        key = f'{type}_{pid}_property_{name}_generator_{selected_generator.id}_{arg.label}')
+                        key = f'{type}_{pid}_property_{name}_generator_{selected_generator.id}_{arg.label}',
+                        help = f'{arg.hint}'
+                        )
                 else:
                     raise Exception(f'property_row.py: Unknown argument type {arg.type} from generator {selected_generator}')
                     

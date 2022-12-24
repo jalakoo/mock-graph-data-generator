@@ -59,26 +59,29 @@ def generators_tab():
                         label=arg.label, 
                         value = arg.default,
                         key = f'{generator.id}_{arg.label}',
-                        placeholder = f'{arg.hint}',
-                        help = f'{arg.description}'
+                        placeholder = f'{arg.placeholder}',
+                        help = f'{arg.hint}'
                         ))
                 if arg.type == GeneratorType.INT or arg.type == GeneratorType.FLOAT:
                     arg_inputs.append(st.number_input(
                         label= arg.label,
                         value= arg.default,
-                        key = f'{generator.id}_{arg.label}'
+                        key = f'{generator.id}_{arg.label}',
+                        help = f'{arg.hint}'
                         ))
                 if arg.type == GeneratorType.BOOL:
                     arg_inputs.append(st.radio(
                         label=arg.label,
                         index=arg.default,
-                        key = f'{generator.id}_{arg.label}'
+                        key = f'{generator.id}_{arg.label}',
+                        help = f'{arg.hint}',
                     ))
                 if arg.type == GeneratorType.DATETIME:
                     arg_inputs.append(st.date_input(
                         label=arg.label,
                         value=datetime.datetime.fromisoformat(arg.default),
-                        key = f'{generator.id}_{arg.label}'
+                        key = f'{generator.id}_{arg.label}',
+                        help = f'{arg.hint}'
                     ))
             if st.button("Generate Example Output", key=f"run_{generator.id}"):
                 try:

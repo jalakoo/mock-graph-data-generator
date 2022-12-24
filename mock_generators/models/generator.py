@@ -71,17 +71,22 @@ class GeneratorArg():
             hint = ""
         else:   
             hint = dict["hint"]
-        if "description" not in dict.keys():
-            description = ""
+        if "placeholder" not in dict.keys():
+            placeholder = ""
         else:
-            description = dict["description"]
+            placeholder = dict["placeholder"]
+        # if "description" not in dict.keys():
+        #     description = ""
+        # else:
+        #     description = dict["description"]
 
         return GeneratorArg(
             type = GeneratorType.type_from_string(dict["type"]),
             label = dict["label"],
             default= default,
             hint = hint,
-            description=description
+            placeholder = placeholder
+            # description=description
         )
 
     def __init__(
@@ -90,16 +95,18 @@ class GeneratorArg():
         label: str,
         default: any = None,
         hint : str = None,
-        description : str = None
+        placeholder: str = None
+        # description : str = None
     ):
         self.type = type
         self.label = label
         self.default = default
         self.hint = hint
-        self.description = description
+        self.placeholder = placeholder
+        # self.description = description
 
     def __str__(self):
-        return f'GeneratorArg: type: {self.type}, label: {self.label}, default: {self.default}, hint: {self.hint}, description: {self.description}'
+        return f'GeneratorArg: type: {self.type}, label: {self.label}, default: {self.default}, hint: {self.hint}, placeholder: {self.placeholder}'
 
     def __repr__(self):
         return self.__str__()
@@ -110,7 +117,7 @@ class GeneratorArg():
             "label": self.label,
             "default": self.default,
             "hint": self.hint,
-            "description": self.description
+            "placeholder":self.placeholder
         }
 
     @staticmethod
